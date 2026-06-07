@@ -1,0 +1,11 @@
+Uninstall specific versions
+
+Open PowerShell as Administrator and run:
+
+Get-WmiObject Win32_Product | Where-Object {$_.Name -eq "Python 3.8.10 (64-bit)"} | ForEach-Object {$_.Uninstall()}
+Get-WmiObject Win32_Product | Where-Object {$_.Name -eq "Python 3.12.0 (64-bit)"} | ForEach-Object {$_.Uninstall()}
+Get-WmiObject Win32_Product | Where-Object {$_.Name -eq "Python 3.13.0 (64-bit)"} | ForEach-Object {$_.Uninstall()}
+
+Replace the exact names if your installed versions differ.
+
+Easier method (recommended)
